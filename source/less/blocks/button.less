@@ -1,0 +1,35 @@
+.button {
+  display: inline-block;
+  padding: 2px 30px 5px;
+  border: 0;
+  border-radius: 15px;
+  font-size: 27px;
+  text-align: center;
+  color: @white-color;
+  background-color: @pink-color;
+  text-decoration: none;
+  .box-shadow();
+
+  @media (max-width: @tablet-width) {
+    font-size: 13px;
+    padding: 5px 30px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &--grass {
+    background-color: @grass-color;
+  }
+
+  &--blue {
+    background-color: @form-color;
+  }
+
+}
+

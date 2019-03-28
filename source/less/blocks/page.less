@@ -1,0 +1,55 @@
+.page {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  font-size: 17px;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: @text-color;
+}
+
+.page * {
+  box-sizing: border-box;
+}
+
+.page__group {
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+
+  &--header {
+    background-image: url("../img/bg-header@1x.png");
+    background-position: bottom center;
+
+    @media (max-width: @tablet-width) {
+      background-position: 20% center;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-header@2x.png");
+    }
+  }
+
+  &--footer {
+    background-image: url("../img/bg-footer@1x.png");
+    background-position: bottom center;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-footer@2x.png");
+    }
+  }
+
+}
+
+.page__overflow-hidden {
+  overflow: hidden;
+}
+
+.page__wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (max-width: @tablet-width) {
+    padding: 0 25px;
+  }
+
+}

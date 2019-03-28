@@ -1,0 +1,207 @@
+.drawing {
+  padding: 1px 25px;
+}
+
+.drawing__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 55px 0;
+  color: @white-color;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -28px;
+    right: -200px;
+    display: block;
+    width: 355px;
+    height: 375px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-image: url("../img/img2@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/img2@2x.png");
+    }
+
+    @media (max-width: @tablet-width) {
+      bottom: -0px;
+      right: -80px;
+      width: 86px;
+      height: 98px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -200px;
+    display: block;
+    width: 355px;
+    height: 375px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-image: url("../img/img4@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/img4@2x.png");
+    }
+
+    @media (max-width: @tablet-width) {
+      bottom: 0;
+      left: -88px;
+      width: 126px;
+      height: 148px;
+    }
+  }
+}
+
+.drawing__title {
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: @tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.drawing__items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  align-content: stretch;
+
+  @media (max-width: @tablet-width) {
+    flex-wrap: nowrap;
+  }
+}
+
+.drawing__item {
+  position: relative;
+  margin-left: 40px;
+  margin-bottom: 40px;
+  margin: 40px 10px;
+  width: 256px;
+  height: 291px;
+  text-align: center;
+  z-index: 0;
+
+  @media (max-width: @tablet-width) {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  &--empty::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    background-position: center center;
+    bottom: 26px;
+    right: 106px;
+    width: 54px;
+    height: 72px;
+    z-index: -1;
+    background-image: url("../img/present@1x.png");
+
+    @media (max-width: @tablet-width) {
+      right: ~"CALC(50% - 27px)";
+      ;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/present@2x.png");
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    background-position: center center;
+    top: 0;
+    right: 0;
+    width: 256px;
+    height: 291px;
+    z-index: -1;
+
+    @media (max-width: @tablet-width) {
+      right: ~"CALC(50% - 128px)";
+      ;
+    }
+  }
+
+  &--pink::before {
+    background-image: url("../img/present1@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/present1@2x.png");
+    }
+  }
+
+  &--grass::before {
+    background-image: url("../img/present2@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/present2@2x.png");
+    }
+  }
+
+  &--turquoise::before {
+    background-image: url("../img/present3@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/present3@2x.png");
+    }
+  }
+
+  &--blue::before {
+    background-image: url("../img/present4@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/present4@2x.png");
+    }
+  }
+
+  &--yellow::before {
+    background-image: url("../img/present5@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/present5@2x.png");
+    }
+  }
+
+}
+
+.drawing__item-title {
+  margin-top: 100px;
+  margin-bottom: 0;
+  font-size: 27px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.drawing__item-subtitle {
+  margin-top: 5px;
+  font-size: 18px;
+}
+
+.drawing__winners {
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

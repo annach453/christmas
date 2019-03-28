@@ -1,0 +1,29 @@
+.header {
+  position: relative;
+  padding-top: 48px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: @tablet-width) {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 22px;
+  }
+}
+
+.header__logo {
+  width: 170px;
+  height: 42px;
+  margin-top: -5px;
+}
+
+.header__nav {
+  @media (max-width: @tablet-width) {
+    position: absolute;
+    top: 35px;
+    right: 0;
+  }
+}

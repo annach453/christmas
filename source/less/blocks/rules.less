@@ -1,0 +1,84 @@
+.rules__title {
+  text-align: center;
+}
+
+.rules__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-top: 35px;
+  overflow: hidden;
+}
+
+.rules__item {
+  font-size: 18px;
+  text-align: center;
+
+  @media (max-width: @tablet-width) {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 138px;
+    height: 127px;
+    margin: 0 auto 15px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  &--buy:before {
+    background-image: url("../img/stone1@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/stone1@2x.png");
+    }
+  }
+
+  &--registrate:before {
+    background-image: url("../img/stone2@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/stone2@2x.png");
+    }
+  }
+
+  &--get:before {
+    background-image: url("../img/stone3@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/stone3@2x.png");
+    }
+
+  }
+
+  &--follow:before {
+    background-image: url("../img/stone4@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/stone4@2x.png");
+    }
+
+  }
+
+  &--gopro:before {
+    background-image: url("../img/stone5@1x.png");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/stone5@2x.png");
+    }
+
+  }
+
+}
+
+.rules__item-title {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 150px;
+}
