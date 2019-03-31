@@ -32,7 +32,7 @@
     var activeSlide = 0;
     var sliderManager = new Hammer.Manager(sliderEl);
     sliderManager.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
-    sliderManager.on('pan', function (e) {
+    sliderManager.on('panleft panright', function (e) {
       var percentage = 100 / slideCount * e.deltaX / window.innerWidth;
       var transformPercentage = percentage - 100 / slideCount * activeSlide;
       sliderEl.style.transform = 'translateX( ' + transformPercentage + '% )';
@@ -59,9 +59,5 @@
   };
 
   sliderHandler(document.querySelector('.rules__wrapper'), document.querySelectorAll('.rules__item'));
-
-
-
-
-
+  sliderHandler(document.querySelector('.drawing__items'), document.querySelectorAll('.drawing__item'));
 })();
