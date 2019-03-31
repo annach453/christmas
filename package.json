@@ -28,5 +28,8 @@
     "normalize.css": "^8.0.1",
     "posthtml-include": "^1.2.0",
     "stylelint": "^9.10.1"
+  },
+  "dependencies": {
+    "swiper": "^4.5.0"
   }
 }
